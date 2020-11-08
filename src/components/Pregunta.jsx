@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import Error from "./Error";
 
 
-const Pregunta = () => {
+const Pregunta = ({ guardarPresupuesto, guardarRestante }) => { // * pasamos info a dos métodos creados en app.js
 
     //! State cantidad presupuesto
     //* como es una cantidad la iniciamos en 0
@@ -32,12 +32,13 @@ const Pregunta = () => {
 
         //* ok
         guardarError(false);
+        guardarPresupuesto(cantidad);
+        guardarRestante(cantidad)
     }
 
     return (
         <Fragment>
             <h2>Indica tu presupuesto</h2>
-
             
             { 
                 //* pasamos variable con mensaje customizado para cada caso al componente error
