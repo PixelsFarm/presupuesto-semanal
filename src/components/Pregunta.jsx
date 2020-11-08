@@ -2,9 +2,12 @@ import React, { Fragment, useState } from 'react';
 
 const Pregunta = () => {
 
-    //! Definir state cantidad presupuesto
+    //! State cantidad presupuesto
     //* como es una cantidad la iniciamos en 0
     const [cantidad, guardarCantidad] = useState(0)
+
+    //! State error
+    const [error, guardarError] = useState(false)
 
     //! Función que lee presupuesto
     //* En el input los datos son pasados como strings, tenemos que pasarlos a números
@@ -19,14 +22,20 @@ const Pregunta = () => {
     const agregarPresupuesto = e => {
         e.preventDefault()
 
-        //? Validar ko o ok
+        //* Validar ko o ok
+        if (cantidad < 1 || isNaN(cantidad)) {
+            guardarError(true);
+            return;
+        }
 
-        //? ok
+        //* ok
+        guardarError(false);
     }
 
     return (
         <Fragment>
             <h2>Indica tu presupuesto</h2>
+            { error ? 'Datos introducidos no válidos' : null }
             <form onSubmit={agregarPresupuesto}>
                 <input 
                     type="number"
