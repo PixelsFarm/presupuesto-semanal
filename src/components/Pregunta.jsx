@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from 'react';
+import Error from "./Error";
+
 
 const Pregunta = () => {
 
@@ -35,7 +37,13 @@ const Pregunta = () => {
     return (
         <Fragment>
             <h2>Indica tu presupuesto</h2>
-            { error ? 'Datos introducidos no válidos' : null }
+
+            
+            { 
+                //* pasamos variable con mensaje customizado para cada caso al componente error
+                error ? <Error mensaje="Los datos introducidos del presupuesto no son válidos" /> : null 
+            }
+
             <form onSubmit={agregarPresupuesto}>
                 <input 
                     type="number"
