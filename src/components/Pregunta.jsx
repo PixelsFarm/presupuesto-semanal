@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import Error from "./Error";
 
 
-const Pregunta = ({ guardarPresupuesto, guardarRestante }) => { // * pasamos info a dos métodos creados en app.js
+const Pregunta = ({ guardarPresupuesto, guardarRestante, actualizarPregunta }) => { // * pasamos info a dos métodos creados en app.js
 
     //! State cantidad presupuesto
     //* como es una cantidad la iniciamos en 0
@@ -33,7 +33,8 @@ const Pregunta = ({ guardarPresupuesto, guardarRestante }) => { // * pasamos inf
         //* ok
         guardarError(false);
         guardarPresupuesto(cantidad);
-        guardarRestante(cantidad)
+        guardarRestante(cantidad);
+        actualizarPregunta(false);
     }
 
     return (

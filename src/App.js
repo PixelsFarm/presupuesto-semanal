@@ -11,22 +11,33 @@ function App() {
     //! state restante presupuesto
     const [restante, guardarRestante] = useState(0)
 
+    //! state carga condicional componentes
+    const [mostrarpregunta, actualizarPregunta] = useState(true)
+
     return (
         <div className="container">
             <header>
                 <h1>Gasto semanal</h1>
                 <div className="contenido-principal contenido">
-                    <Pregunta
-                        guardarPresupuesto={guardarPresupuesto}
-                        guardarRestante={guardarRestante}
-                    />
-
-                    <div className="row">
-                        <div className="one-half column">
-                            <Formulario />
-                        </div>
-                        <div className="one-half column">2</div>
-                    </div>
+                    { mostrarpregunta 
+                        ?(
+                            <Pregunta
+                                guardarPresupuesto={guardarPresupuesto}
+                                guardarRestante={guardarRestante}
+                                actualizarPregunta={actualizarPregunta}
+                            />
+                        )
+                        :(
+                            <div className="row">
+                                <div className="one-half column">
+                                    <Formulario />
+                                </div>
+                                <div className="one-half column">
+                                    2
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </header>
         </div>
