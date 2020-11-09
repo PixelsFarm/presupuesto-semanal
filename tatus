@@ -1,0 +1,41 @@
+[33mcommit a594795d49f72e55f50ac1ad0999cae2313dd1ef[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: hector <h.pascual@ondho.com>
+Date:   Mon Nov 9 00:44:44 2020 +0100
+
+    Crear states para almacenamiento de presupuesto y restante
+
+[33mcommit 4855200b5f074edb95861d7633a6b1832aae1b3e[m
+Author: hector <h.pascual@ondho.com>
+Date:   Mon Nov 9 00:36:56 2020 +0100
+
+    Mostrar mensaje de error si los datos introducidos del presupuesto no son válidos
+
+[33mcommit afd11f9bf4adf29d90e467be1a101a00e5ee0b70[m
+Author: hector <h.pascual@ondho.com>
+Date:   Mon Nov 9 00:28:58 2020 +0100
+
+    Validación datos introducidos presupuesto
+
+[33mcommit 12727c3b388537905ee1520e840b0d51705e23c4[m
+Author: hector <h.pascual@ondho.com>
+Date:   Mon Nov 9 00:16:46 2020 +0100
+
+    Leyendo datos presupuesto introducidos por el usuario
+
+[33mcommit 4db61cbe813ab629f259cd5bb73ffeacba554fd5[m
+Author: hector <h.pascual@ondho.com>
+Date:   Sun Nov 8 23:47:28 2020 +0100
+
+    Crear formulario indicnado presupuesto
+
+[33mcommit 901e023f5baf1facfa4b97312828ea6d6430beec[m
+Author: hector <h.pascual@ondho.com>
+Date:   Sun Nov 8 23:38:25 2020 +0100
+
+    Inicializar proyecto
+
+[33mcommit b754c8944d741509eb5fef6234db183f34f4c1f5[m
+Author: hector <h.pascual@ondho.com>
+Date:   Sun Nov 8 23:24:27 2020 +0100
+
+    Initialize project using Create React App
