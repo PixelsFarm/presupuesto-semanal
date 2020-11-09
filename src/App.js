@@ -20,14 +20,13 @@ function App() {
                 <h1>Gasto semanal</h1>
                 <div className="contenido-principal contenido">
                     { mostrarpregunta 
-                        ?(
+                        ?
                             <Pregunta
                                 guardarPresupuesto={guardarPresupuesto}
                                 guardarRestante={guardarRestante}
                                 actualizarPregunta={actualizarPregunta}
                             />
-                        )
-                        :(
+                        :
                             <div className="row">
                                 <div className="one-half column">
                                     <Formulario />
@@ -36,7 +35,6 @@ function App() {
                                     2
                                 </div>
                             </div>
-                        )
                     }
                 </div>
             </header>
