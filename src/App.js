@@ -14,6 +14,17 @@ function App() {
     //! state carga condicional componentes
     const [mostrarpregunta, actualizarPregunta] = useState(true)
 
+    //! state gastos
+    const [gastos, guardarGastos] = useState([])
+
+    //! funcion cada vez agreguemos nuevo gasto
+    const agregarNuevoGasto = gasto => {
+        guardarGastos([
+            ...gastos,
+            gasto
+        ])
+    }
+
     return (
         <div className="container">
             <header>
@@ -29,7 +40,9 @@ function App() {
                         :
                             <div className="row">
                                 <div className="one-half column">
-                                    <Formulario />
+                                    <Formulario
+                                        agregarNuevoGasto={agregarNuevoGasto}   
+                                    />
                                 </div>
                                 <div className="one-half column">
                                     2
